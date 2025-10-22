@@ -36,7 +36,9 @@ const server = createServer((req, res) => {
 })
 
 const wss = new WebSocketServer({ server })
-
+console.log(PASS);
+console.log(METHOD);
+console.log(PORT);
 wss.on('connection', (ws, req) => {
   const from = `${req.socket.remoteAddress}:${req.socket.remotePort}`
   let decipher = null
